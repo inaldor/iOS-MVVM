@@ -7,11 +7,6 @@ This app is the result of my studies using MVVM and JSON handling. It is a simpl
 ## Features
 * Show the photo in details when clicking on it.
 
-## Pictures
-
-<img src="oooo" width=300>
-<img src="oooo" width=300>
-
 ## License
 
-This project is licensed under the [MIT License](oooo)
+This project is licensed under the [MIT License](https://github.com/inaldor/iOS-MVVM/blob/master/LICENSE)
