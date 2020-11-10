@@ -12,6 +12,12 @@
 		00F868E5240196F20085854E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F868E3240196F20085854E /* Main.storyboard */; };
 		00F868E7240196F30085854E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F868E6240196F30085854E /* Assets.xcassets */; };
 		00F868EA240196F30085854E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F868E8240196F30085854E /* LaunchScreen.storyboard */; };
+		00F868F6240198190085854E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F868F5240198190085854E /* APIService.swift */; };
+		00F868F82401982F0085854E /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F868F72401982F0085854E /* content.json */; };
+		00F868FA2401985E0085854E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F868F92401985E0085854E /* Photo.swift */; };
+		00F868FC2401988C0085854E /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F868FB2401988C0085854E /* PhotoListViewModel.swift */; };
+		00F868FF240198C60085854E /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F868FE240198C60085854E /* PhotoListViewController.swift */; };
+		00F869032401991D0085854E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F869022401991D0085854E /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		00F868E6240196F30085854E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F868E9240196F30085854E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F868EB240196F30085854E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F868F5240198190085854E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		00F868F72401982F0085854E /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		00F868F92401985E0085854E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		00F868FB2401988C0085854E /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		00F868FE240198C60085854E /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		00F869022401991D0085854E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		3B3AC9B0ACDCC1C870FFB653 /* Pods-iOS-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM/Pods-iOS-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		993C3A27B5F6D35154A5B083 /* Pods-iOS-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM.release.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM/Pods-iOS-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +54,8 @@
 			children = (
 				00F868DE240196F20085854E /* iOS-MVVM */,
 				00F868DD240196F20085854E /* Products */,
+				A1CF3537B385D525860E7B4C /* Pods */,
+				D9FF6088781246E28924D9B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +70,11 @@
 		00F868DE240196F20085854E /* iOS-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				00F868F4240197400085854E /* Service */,
+				00F868F32401973E0085854E /* Model */,
+				00F868F22401973B0085854E /* ViewModel */,
+				00F868FD2401989D0085854E /* Controllers */,
+				00F868F1240197390085854E /* Views */,
 				00F868DF240196F20085854E /* AppDelegate.swift */,
 				00F868E1240196F20085854E /* ViewController.swift */,
 				00F868E3240196F20085854E /* Main.storyboard */,
@@ -64,6 +85,79 @@
 			path = "iOS-MVVM";
 			sourceTree = "<group>";
 		};
+		00F868F1240197390085854E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00F868F22401973B0085854E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00F868FB2401988C0085854E /* PhotoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00F868F32401973E0085854E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00F868F92401985E0085854E /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00F868F4240197400085854E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00F868F5240198190085854E /* APIService.swift */,
+				00F868F72401982F0085854E /* content.json */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		00F868FD2401989D0085854E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00F86901240198E60085854E /* PhotoDetail */,
+				00F86900240198D90085854E /* PhotoList */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00F86900240198D90085854E /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				00F868FE240198C60085854E /* PhotoListViewController.swift */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		00F86901240198E60085854E /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00F869022401991D0085854E /* PhotoDetailViewController.swift */,
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		A1CF3537B385D525860E7B4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B3AC9B0ACDCC1C870FFB653 /* Pods-iOS-MVVM.debug.xcconfig */,
+				993C3A27B5F6D35154A5B083 /* Pods-iOS-MVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D9FF6088781246E28924D9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F868EE240196F30085854E /* Build configuration list for PBXNativeTarget "iOS-MVVM" */;
 			buildPhases = (
+				11DC46A8452B4DB737CBA585 /* [CP] Check Pods Manifest.lock */,
 				00F868D8240196F20085854E /* Sources */,
 				00F868D9240196F20085854E /* Frameworks */,
 				00F868DA240196F20085854E /* Resources */,
@@ -125,18 +220,49 @@
 				00F868EA240196F30085854E /* LaunchScreen.storyboard in Resources */,
 				00F868E7240196F30085854E /* Assets.xcassets in Resources */,
 				00F868E5240196F20085854E /* Main.storyboard in Resources */,
+				00F868F82401982F0085854E /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11DC46A8452B4DB737CBA585 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00F868D8240196F20085854E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F868FA2401985E0085854E /* Photo.swift in Sources */,
 				00F868E2240196F20085854E /* ViewController.swift in Sources */,
+				00F868F6240198190085854E /* APIService.swift in Sources */,
+				00F869032401991D0085854E /* PhotoDetailViewController.swift in Sources */,
+				00F868FC2401988C0085854E /* PhotoListViewModel.swift in Sources */,
 				00F868E0240196F20085854E /* AppDelegate.swift in Sources */,
+				00F868FF240198C60085854E /* PhotoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +406,13 @@
 		};
 		00F868EF240196F30085854E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3AC9B0ACDCC1C870FFB653 /* Pods-iOS-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP3J94A3ZR;
 				INFOPLIST_FILE = "iOS-MVVM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +426,13 @@
 		};
 		00F868F0240196F30085854E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993C3A27B5F6D35154A5B083 /* Pods-iOS-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP3J94A3ZR;
 				INFOPLIST_FILE = "iOS-MVVM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
